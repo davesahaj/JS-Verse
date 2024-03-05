@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Navbar() {
   return (
@@ -7,6 +8,7 @@ export default function Navbar() {
         <span className="text-slate-600">JS</span>
         <span className="text-primary">Verse</span>
       </Link>
+      <ModeToggle />
     </nav>
   );
 }
