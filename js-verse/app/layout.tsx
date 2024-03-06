@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/app/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {" "}
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -26,7 +26,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main className="max-w-5xl mx-auto px-4">{children}</main>
         </ThemeProvider>
       </body>
     </html>
