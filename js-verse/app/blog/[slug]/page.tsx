@@ -30,7 +30,9 @@ export default async function Article({
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
           Sahaj Dave Blog
         </span>
-        <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl "></span>
+        <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl ">
+          {data.title}
+        </span>
       </h1>
 
       <Image
@@ -39,7 +41,7 @@ export default async function Article({
         height={800}
         alt="blog cover image"
         priority
-        className="rounded-lg mt-8 border"
+        className="rounded-lg mt-8 border mx-auto"
       />
 
       <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-headings:underline prose-li:marker:text-primary prose-a:text-primary">
