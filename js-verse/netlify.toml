@@ -1,3 +1,2 @@
 [build.ignore]
-  files = ["node_modules"]
-  base = "sanity"
+  files = ["sanity/**"]
