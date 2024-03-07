@@ -1,0 +1,4 @@
+[build]
+  command = "next build"
+  publish = "/opt/build/repo/js-verse"
+  ignore = ["sanity/**"]
