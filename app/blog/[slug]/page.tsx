@@ -37,14 +37,14 @@ export default async function Article({
 
       <Image
         src={urlFor(data.titleImage).url()}
-        width={800}
-        height={800}
+        width={700}
+        height={400}
         alt="blog cover image"
         priority
         className="rounded-lg mt-8 border mx-auto"
       />
 
-      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-headings:underline prose-li:marker:text-primary prose-a:text-primary">
+      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-headings:text-primary prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data.content} />
       </div>
     </div>
