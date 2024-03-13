@@ -9,6 +9,7 @@ async function getData(slug: string) {
         "currentSlug":slug.current,
           title,
           content,
+          smallDescription,
           titleImage
       }[0]
       `;
@@ -27,11 +28,11 @@ export default async function Article({
   return (
     <div className="mt-8">
       <h1>
-        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          Sahaj Dave Blog
-        </span>
-        <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl ">
+        <span className="my-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl ">
           {data.title}
+        </span>
+        <span className="block italic text-base text-center text-primary font-normal tracking-wide capitalize">
+          {data.smallDescription}
         </span>
       </h1>
 
@@ -44,7 +45,7 @@ export default async function Article({
         className="rounded-lg mt-8 border mx-auto"
       />
 
-      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-headings:text-primary prose-li:marker:text-primary prose-a:text-primary">
+      <div className="mt-16 mx-auto prose prose-blue prose-lg dark:prose-invert prose-headings:text-primary prose-li:marker:text-primary prose-a:text-primary">
         <PortableText value={data.content} />
       </div>
     </div>
