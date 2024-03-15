@@ -1,10 +1,10 @@
 import { ThemeProvider } from "@/app/components/theme-provider";
 
-import type { Metadata } from "next";
-import { Inter, Lato } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/navbar";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Lato } from "next/font/google";
+import Navbar from "./components/navbar";
+import "./globals.css";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -15,7 +15,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "JS Verse",
+  title: "The Arbitrary",
   description: "A blog by Sahaj Dave",
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="max-w-5xl mx-auto px-4 font-lato">{children}</main>
+          <main className="max-w-6xl mx-auto px-4 font-lato">{children}</main>
         </ThemeProvider>
       </body>
     </html>
